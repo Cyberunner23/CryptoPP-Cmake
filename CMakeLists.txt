@@ -2,7 +2,7 @@ CMAKE_MINIMUM_REQUIRED (VERSION 2.8.7)
 PROJECT (cryptopp)
 
 #STATIC | SHARED
-OPTION(COMPILE_CRYPTOPP_LIB_SHARED    "Build cryptopp as a shared lib (setting this to OFF will compile statically)" ON)
+OPTION(COMPILE_CRYPTOPP_LIB_SHARED "Build cryptopp as a shared lib (setting this to OFF will compile statically)" ON)
 #OPTION(CRYPTOPP_BUILD_TESTS  "Build cryptopp tests" ON)
 OPTION(CRYPTOPP_DISABLE_ASM  "Disable ASM" ON)
 OPTION(CRYPTOPP_DISABLE_SSSE3 "Disable SSSE3" ON)
@@ -286,19 +286,19 @@ IF (CRYPTOPP_DISABLE_AESNI)
 	ADD_DEFINITIONS (-DCRYPTOPP_DISABLE_AESNI)
 ENDIF ()
 
-IF(COMPILE_LIB_SHARED)
+IF(COMPILE_CRYPTOPP_LIB_SHARED)
 	ADD_LIBRARY (cryptopp
     	SHARED
     	${cryptopp_SOURCES}
     	${cryptopp_HEADERS}
     )
-ELSE(COMPILE_LIB_SHARED)
+ELSE(COMPILE_CRYPTOPP_LIB_SHARED)
 	ADD_LIBRARY (cryptopp
     	STATIC
     	${cryptopp_SOURCES}
     	${cryptopp_HEADERS}
     )
-ENDIF(COMPILE_LIB_SHARED)
+ENDIF(COMPILE_CRYPTOPP_LIB_SHARED)
 
 
 set_target_properties(cryptopp
