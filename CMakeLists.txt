@@ -2,11 +2,11 @@ CMAKE_MINIMUM_REQUIRED (VERSION 2.8.7)
 PROJECT (cryptopp)
 
 #STATIC | SHARED
-OPTION(COMPILE_CRYPTOPP_LIB_SHARED "Build cryptopp as a shared lib (setting this to OFF will compile statically)" ON)
+OPTION(COMPILE_CRYPTOPP_LIB_SHARED "Build cryptopp as a shared lib (setting this to OFF will compile statically)")
 #OPTION(CRYPTOPP_BUILD_TESTS  "Build cryptopp tests" ON)
-OPTION(CRYPTOPP_DISABLE_ASM  "Disable ASM" ON)
-OPTION(CRYPTOPP_DISABLE_SSSE3 "Disable SSSE3" ON)
-OPTION(CRYPTOPP_DISABLE_AESNI "Disable AES-NI" ON)
+OPTION(CRYPTOPP_DISABLE_ASM  "Disable ASM")
+OPTION(CRYPTOPP_DISABLE_SSSE3 "Disable SSSE3")
+OPTION(CRYPTOPP_DISABLE_AESNI "Disable AES-NI")
 
 SET (cryptopp_SOURCES
 	src/3way.cpp
