@@ -1,3 +1,5 @@
+PLEASE NOTE THAT THIS PROJECT (THE CMAKE PART) IS NO LONGER BEING MAINTAINED.
+
 Crypto++: a C++ Class Library of Cryptographic Schemes
 Version 5.6.2 - 2/20/2013
 
